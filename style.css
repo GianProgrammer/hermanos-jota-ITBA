@@ -1,5 +1,57 @@
+main {
+    height: 70vh;
+}
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+header {
+    flex: 0 0 15%;
+    background: #fdecda;
+    display: flex;
+    justify-content: space-between;
+    height: 15vh;
+}
+footer {
+    flex: 0 0 15%;
+    background-color: #fdecda;
+    color: white;
+    text-align: center;
+    display: flex;
+    height: 15vh;
+}
+.logo {
+    width: 120px;
+    height: auto;
+}
+.carrito {
+    width: 40px;
+    height: auto;
+}
+li {
+    padding: 1rem;
+    list-style: none;
+}
+nav {
+    padding-right: 2rem;
+    padding-top: 1.5rem;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1rem;
+    display: flex;
+}
+a {
+color: #222;           
+text-decoration: none;
+font-size: 25px;
+font-family: inherit;
+}
+a:visited {
+    color: #222;      
+}
+a:hover {
+    color: #a67c52;        
 }
