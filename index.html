@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hermanos Jota</title>
     <style>
-         header {
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        header {
             flex: 0 0 15%;
             background: #fdecda;
             display: flex;
@@ -18,20 +22,16 @@
             display: flex;
         }
         .logo {
-            width: 100px;
-            height: auto;
-        }
-        .links {
-            width: 100px;
+            width: 120px;
             height: auto;
         }
         .carrito {
             width: 40px;
             height: auto;
         }
-        p {
-            padding: 10px;
-            font-size: 25px;
+        li {
+            padding: 1rem;
+            list-style: none;
         }
         a {
         color: #222;           
@@ -51,14 +51,18 @@
 <body>
     <header>
         <img src="img/logo.svg" alt="Hermanos Jota" class="logo">
-        <p><a href="index.html">Inicio</a></p>
-        <p><a href="productos.html">Productos</a></p>
-        <p><a href="contactos.html">Contactos</a></p>
-        <img src="img/carrito-prueba.png" alt="" class="carrito">
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="contactos.html">Contactos</a></li>
+            </ul>
+        </nav>
+        <img src="img/carro.png" alt="" class="carrito">
     </header>
     <p>Hola</p>
     <footer>
-        <p><a href="https://www.instagram.com/hermanosjota/" target="_blank">Instagram</a></p>
+        <p><a href="https://acortar.link/aLLHDi" target="_blank"> Instagram </a></p>
     </footer>
 </body>
 </html>
