@@ -1,57 +1,84 @@
-main {
-    height: 70vh;
-}
-* {
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@media (min-width: 768px) {
+    main {
+        height: 70vh;
+        background-color: #A0522D;
+    }
+    * {
     margin: 0;
     padding: 0;
-}
-header {
-    flex: 0 0 15%;
-    background: #fdecda;
-    display: flex;
-    justify-content: space-between;
-    height: 15vh;
-}
-footer {
-    flex: 0 0 15%;
-    background-color: #fdecda;
-    color: white;
-    text-align: center;
-    display: flex;
-    height: 15vh;
-}
-.logo {
-    width: 120px;
-    height: auto;
-}
-.carrito {
-    width: 40px;
-    height: auto;
-}
-li {
-    padding: 1rem;
-    list-style: none;
-}
-nav {
-    padding-right: 2rem;
-    padding-top: 1.5rem;
-}
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 1rem;
-    display: flex;
-}
-a {
-color: #222;           
-text-decoration: none;
-font-size: 25px;
-font-family: inherit;
-}
-a:visited {
-    color: #222;      
-}
-a:hover {
-    color: #a67c52;        
+    }
+    header {
+        flex: 0 0 15%;
+        background: #F5E6D3;
+        display: flex;
+        justify-content: space-between;
+        height: 15vh;
+    }
+    
+    footer {
+        flex: 0 0 15%;
+        background-color: #F5E6D3;
+        color: white;
+        display: flex;
+        height: 15vh;
+        flex-direction: row;
+    }
+    div {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        height: 50%;
+    }
+    .logo {
+        width: 120px;
+        height: auto;
+    }
+    .carrito {
+        width: 40px;
+        height: auto;
+    }
+    li {
+        padding: 0.5rem;
+        list-style: none;
+    }
+    nav {
+        padding-right: 2rem;
+        padding-top: 3.2rem;
+    }
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        gap: 1rem;
+        display: flex;
+    }
+    P {
+    color: #A0522D;           
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: 'Inter Medium', sans-serif;
+    font-weight: 500;
+    }
+    a {
+    color: #A0522D;           
+    text-decoration: none;
+    font-size: 2rem;
+    font-family: 'Inter Medium', sans-serif;
+    font-weight: 500;
+    }
+    a:visited {
+        color: #A0522D;      
+    }
+    a:hover {
+        color: #a67c52;        
+    }
+    .redes {
+        font-size: 1rem;
+    }
+    .Whatsapp {
+        padding-top:1.3rem;
+    }
+
 }
