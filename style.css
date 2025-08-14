@@ -9,36 +9,25 @@
 /* desktop */
 
 @media (min-width: 768px) {
-    main {
-        height: 70vh;
-        background-color: #A0522D;
-    }
+
     * {
     margin: 0;
     padding: 0;
     }
+
+    body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
     header {
-        flex: 0 0 15%;
         background: #F5E6D3;
         display: flex;
         justify-content: space-between;
-        height: 15vh;
     }
     
-    footer {
-        flex: 0 0 15%;
-        background-color: #F5E6D3;
-        color: white;
-        display: flex;
-        height: 15vh;
-        flex-direction: row;
-    }
-    div {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        height: 50%;
-    }
+
     .logo {
         width: 120px;
         height: auto;
@@ -48,12 +37,12 @@
         height: auto;
     }
     li {
-        padding: 0.5rem;
         list-style: none;
     }
     nav {
-        padding-right: 2rem;
-        padding-top: 3.2rem;
+        display: flex;
+        align-items: center;
+        margin-right: 1rem;
     }
     nav ul {
         list-style: none;
@@ -61,39 +50,15 @@
         padding: 0;
         gap: 1rem;
         display: flex;
+        align-items: center;
     }
-    p {
-    color: #A0522D;           
-    text-decoration: none;
-    font-size: 1rem;
-    font-family: 'Inter Medium', sans-serif;
-    font-weight: 500;
-    }
-    a {
-    color: #A0522D;           
-    text-decoration: none;
-    font-size: 2rem;
-    font-family: 'Inter Medium', sans-serif;
-    font-weight: 500;
-    }
-    a:visited {
-        color: #A0522D;      
-    }
-    a:hover {
-        color: #a67c52;        
-    }
-    .redes {
-        font-size: 1rem;
-    }
-    .Whatsapp {
-        padding-top:1.3rem;
-    }
-        /* HERO */
+
+        /* hero banner */
     .hero {
         background-image: url('img/heroBanner.png'); /* Cambia por tu imagen */
         background-size: cover;
         background-position: center;
-        height: 400px;
+        flex: 2;
         display: flex;
         align-items: center;
         padding-left: 50px;
@@ -125,4 +90,47 @@
     .btn:hover {
         background-color: #8b5c25;
     }
+
+    /* productos destacados */
+
+    .prod-dest {
+        display: flex;
+        flex: 1;
+    }
+
+    /* footer */
+
+    footer {
+        background-color: #F5E6D3;
+        color: white;
+        display: flex;
+    }
+
+    p {
+    color: #A0522D;           
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: 'Inter Medium', sans-serif;
+    font-weight: 500;
+    }
+    a {
+    color: #A0522D;           
+    text-decoration: none;
+    font-size: 2rem;
+    font-family: 'Inter Medium', sans-serif;
+    font-weight: 500;
+    }
+    a:visited {
+        color: #A0522D;      
+    }
+    a:hover {
+        color: #a67c52;        
+    }
+    .redes {
+        font-size: 1rem;
+    }
+    .copyright {
+        margin: auto;
+    }
+
 }
