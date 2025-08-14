@@ -114,23 +114,24 @@ const productos = [
 
 
 function renderizarProductos() {
-  const destacados = productos.slice(0,3);
   const contenedor = document.querySelector('.prod-dest');
-  contenedor.innerHTML = ""; // Limpia lo que haya
+
+  // Si no estamos en index.html, este contenedor no existe, así que salimos
+  if (!contenedor) return;
+
+  const destacados = productos.slice(0, 3);
+  contenedor.innerHTML = "";
 
   destacados.forEach(prod => {
     const card = document.createElement('div');
     card.classList.add('card');
     card.style.width = '18rem';
-
-    // Si tienes imágenes en tu array, aquí las usarías.
-    // Por ahora dejo una imagen genérica.
     card.innerHTML = `
-      <img src="${prod.ruta}" class="card-img-top" alt="${prod.nombre}">
+      <img src="${prod.ruta || 'img/no-image.png'}" class="card-img-top" alt="${prod.nombre}">
       <div class="card-body">
         <h5 class="card-title">${prod.nombre}</h5>
         <p class="card-text">${prod.descripcion}</p>
-        <p><b>Medidas:</b> ${prod.medidas}</p>
+        <p><b>Medidas:</b> ${prod.medidas || '-'}</p>
         <a href="#" class="btn btn-primary">Ver más</a>
       </div>
     `;
@@ -139,3 +140,67 @@ function renderizarProductos() {
 }
 
 document.addEventListener('DOMContentLoaded', renderizarProductos);
+
+// =======================
+// Render catálogo en productos.html
+// =======================
+function inicializarCatalogo() {
+  const contenedor = document.getElementById('lista-productos');
+  const buscador = document.getElementById('buscador');
+  const btnCargar = document.getElementById('btn-cargar');
+
+  if (!contenedor || !buscador || !btnCargar) return; // Evita ejecutar si no estamos en productos.html
+
+  let productosMostrados = 0;
+  const productosPorPagina = 6;
+  let productosFiltrados = [...productos];
+
+  function renderizarCatalogo() {
+    const hasta = productosMostrados + productosPorPagina;
+    const lote = productosFiltrados.slice(productosMostrados, hasta);
+
+    lote.forEach(prod => {
+      const card = document.createElement('div');
+      card.classList.add('card');
+      card.innerHTML = `
+        <img src="${prod.ruta || 'img/no-image.png'}" class="card-img-top" alt="${prod.nombre}">
+        <div class="card-body">
+          <h5 class="card-title">${prod.nombre}</h5>
+          <p class="card-text">${prod.descripcion}</p>
+          <p><b>Medidas:</b> ${prod.medidas || '-'}</p>
+          <a href="#" class="btn btn-primary">Ver más</a>
+        </div>
+      `;
+      contenedor.appendChild(card);
+    });
+
+    productosMostrados += lote.length;
+    btnCargar.style.display = productosMostrados >= productosFiltrados.length ? 'none' : 'block';
+  }
+
+  function filtrarProductos() {
+    const texto = buscador.value.toLowerCase();
+    productosFiltrados = productos.filter(p => p.nombre.toLowerCase().includes(texto));
+    productosMostrados = 0;
+    contenedor.innerHTML = '';
+    renderizarCatalogo();
+  }
+
+  // Inicialización
+  renderizarCatalogo();
+  buscador.addEventListener('input', filtrarProductos);
+  btnCargar.addEventListener('click', renderizarCatalogo);
+}
+
+// =======================
+// Inicialización global
+// =======================
+document.addEventListener('DOMContentLoaded', () => {
+  // Home (index.html)
+  renderizarProductos();
+
+  // Catálogo (productos.html)
+  if (typeof inicializarCatalogo === 'function') {
+    inicializarCatalogo();
+  }
+});
