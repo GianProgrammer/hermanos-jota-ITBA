@@ -58,8 +58,8 @@
         background-image: url('img/heroBanner.png'); /* Cambia por tu imagen */
         background-size: cover;
         background-position: center;
-        flex: 2;
         display: flex;
+        flex: 1;
         align-items: center;
         padding-left: 50px;
     }
@@ -95,7 +95,11 @@
 
     .prod-dest {
         display: flex;
-        flex: 1;
+    }
+
+    .card-img-top {
+        width: 5rem;
+        height: 5rem;
     }
 
     /* footer */
