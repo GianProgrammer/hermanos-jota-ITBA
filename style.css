@@ -61,13 +61,19 @@
         flex: 2;
         display: flex;
         align-items: center;
-        padding-left: 50px;
+        padding-left: 1rem;
+        width: 99.45vw;
+        position: relative;
+        margin-left: calc(-50vw + 50%);
+        min-height: 350px;
     }
 
     .hero-content {
         color: white;
         font-family: 'Playfair Display', serif;
         max-width: 400px;
+        padding: 40px 20px;
+        width: 100%;
         align-items: center;
     }
 
@@ -96,6 +102,8 @@
     .prod-dest {
         display: flex;
         flex: 1;
+        padding-top: 2rem;
+        color: #A0522D;
     }
 
     /* footer */
@@ -129,8 +137,33 @@
     .redes {
         font-size: 1rem;
     }
-    .copyright {
-        margin: auto;
+    .copyCenter {
+        justify-content: center;
+        display: flex;
+        align-items: center;
     }
-
+    .container {
+        display: flex;
+        gap: 20px;
+        justify-content: center;  
+        align-items: flex-start; 
+        margin: 40px 0;
+        flex-wrap: wrap;        
+    }
+    .product {
+        width: 200px;
+        height: 300px;
+        background-color: #f5e6d3;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .fotoProducto {
+        width: 100%;
+        height: auto;
+        border-radius: 10px 10px 0 0;
+    }
 }
