@@ -204,3 +204,21 @@ document.addEventListener('DOMContentLoaded', () => {
     inicializarCatalogo();
   }
 });
+document.addEventListener("DOMContentLoaded", () => {
+    const motivoSelect = document.getElementById("motivo");
+    const opciones = [
+        "Mobiliario para residencia privada",
+        "Proyectos corporativos y hotelería",
+        "Proveedores",
+        "Reclamos",
+        "Marketing y prensa",
+        "Trabajá con nosotros"
+    ];
+
+    opciones.forEach(opcion => {
+        const opt = document.createElement("option");
+        opt.value = opcion;
+        opt.textContent = opcion;
+        motivoSelect.appendChild(opt);
+    });
+});
