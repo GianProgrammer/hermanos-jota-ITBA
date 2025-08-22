@@ -54,23 +54,15 @@ nav ul {
     display: flex;
     min-height: 60vh;
     flex: 1;
-    align-items: center;
     padding-left: 1rem;
     width: 99.45vw;
     position: relative;
     margin-left: calc(-50vw + 50%);
     min-height: 350px;
-}
-.hero-banner {
-    width: 100vw; /* Ocupa el 100% del ancho de la ventana */
-    height: 100vh; /* Ocupa el 100% de la altura de la ventana */
-    background-image: url('img/BannerContacto1.png'); /* Cambia por tu imagen */
-    background-size: cover;
-    background-position: center;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center;   /* centra horizontalmente */
+    align-items: center;       /* centra verticalmente */
+    height: 80vh;              /* altura más grande (ajustá a gusto) */
+    text-align: center;        /* centra el texto dentro */
 }
 
 .hero-content {
@@ -82,11 +74,6 @@ nav ul {
     align-items: center;
 }
 
-.hero-content h2 {
-    font-size: 36px;
-    line-height: 1.2;
-    margin-bottom: 20px;
-}
 
 .btn {
     background-color: #f5e6d3;
@@ -208,7 +195,7 @@ header  a:hover {
   font-family: "Playfair Display", serif;
   letter-spacing: .12em;
   text-transform: uppercase;
-  color: var(--ink);
+  color: white;
   text-align: center;
   font-weight: 400;
   font-size: clamp(28px, 3.4vw, 44px);
@@ -217,7 +204,7 @@ header  a:hover {
 
 .subtitulo-contacto{
   text-align:center;
-  color:#5a4635;
+  color:white;
   max-width: 900px;
   margin: 0 auto 28px;
   padding: 0 20px;
