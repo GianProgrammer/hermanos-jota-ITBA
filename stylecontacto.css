@@ -33,7 +33,6 @@ li {
 }
 nav {
     display: flex;
-    
     align-items: center;
     margin-right: 1rem;
 }
@@ -46,7 +45,7 @@ nav ul {
     align-items: center;
 }
 
-    /* hero banner */
+/* hero banner */
 .hero {
     background-image: url('img/BannerContacto1.png'); /* Cambia por tu imagen */
     background-size: cover;
