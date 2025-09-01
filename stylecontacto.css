@@ -341,7 +341,7 @@ header  a:hover {
 /* Estilo del select "Motivo" igual que inputs y textarea */
 .contacto-formulario select {
   width: 100%;
-  appearance: none; /* Quita el estilo por defecto del sistema */
+  appearance:none;
   -webkit-appearance: none;
   -moz-appearance: none;
   border: 1.5px solid var(--line);
