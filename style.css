@@ -28,7 +28,7 @@
     }
     
     .logo {
-        width: 120px;
+        width: 90px;
         height: auto;
     }
     .carrito {
@@ -182,7 +182,7 @@
     a {
     color: #A0522D;           
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-family: 'Inter Medium', sans-serif;
     font-weight: 500;
     }
