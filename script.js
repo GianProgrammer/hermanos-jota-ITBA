@@ -1,5 +1,6 @@
 const productos = [
   {
+    id: 1,
     ruta: "img/Aparador Uspallata.png",
     nombre: "Aparador Uspallata",
     descripcion: "Aparador de seis puertas fabricado en nogal sostenible con tiradores metálicos en acabado latón.",
@@ -10,6 +11,7 @@ const productos = [
     capacidad: "6 compartimentos interiores"
   },
   {
+    id: 2,
     ruta: "img/Biblioteca Recoleta.png",
     nombre: "Biblioteca Recoleta",
     descripcion: "Sistema modular de estantes abierto en acero Sage Green y repisas en roble claro. Versátil y elegante.",
@@ -20,6 +22,7 @@ const productos = [
     modulares: "5 estantes ajustables"
   },
   {
+    id: 3,
     ruta: "img/Butaca Mendoza.png",
     nombre: "Butaca Mendoza",
     descripcion: "Butaca tapizada en bouclé Dusty Rose con base de guatambú. Respaldo curvo y diseño orgánico.",
@@ -30,6 +33,7 @@ const productos = [
     confort: "Espuma alta densidad"
   },
   {
+    id: 4,
     ruta:"img/Sillón Copacabana.png",
     nombre: "Sillón Copacabana",
     descripcion: "Sillón lounge en cuero cognac con base giratoria en acero Burnt Sienna. Inspiración brasilera moderna.",
@@ -40,6 +44,7 @@ const productos = [
     garantia: "10 años en estructura"
   },
   {
+    id: 5,
     ruta:"img/Mesa de Centro Araucaria.png",
     nombre: "Mesa de Centro Araucaria",
     descripcion: "Mesa de centro con sobre circular de mármol Patagonia y patas de nogal.",
@@ -50,6 +55,7 @@ const productos = [
     cargaMaxima: "25 kg distribuidos"
   },
   {
+    id: 6,
     ruta:"img/Mesa de Noche Aconcagua.png",
     nombre: "Mesa de Noche Aconcagua",
     descripcion: "Mesa de noche con cajón oculto y repisa inferior en roble FSC®.",
@@ -60,6 +66,7 @@ const productos = [
     caracteristicas: "Cajón con cierre suave"
   },
   {
+    id: 7,
     ruta:"img/Cama neuquen.png",
     nombre: "Cama Neuquén",
     descripcion: "Cama plataforma con cabecero flotante tapizado en lino natural.",
@@ -70,6 +77,7 @@ const productos = [
     caracteristicas: "Cabecero flotante acolchado"
   },
   {
+    id: 8,
     ruta:"img/Sofá Patagonia.png",
     nombre: "Sofá Patagonia",
     descripcion: "Sofá de tres cuerpos tapizado en lino Warm Alabaster con patas de madera.",
@@ -80,6 +88,7 @@ const productos = [
     sostenibilidad: "Materiales 100% reciclables"
   },
   {
+    id: 9,
     ruta:"img/Mesa Comedor Pampa.png",
     nombre: "Mesa Comedor Pampa",
     descripcion: "Mesa extensible de roble macizo con tablero biselado.",
@@ -90,6 +99,7 @@ const productos = [
     extension: "Sistema de mariposa central"
   },
   {
+    id: 10,
     ruta:"img/Sillas Córdoba.png",
     nombre: "Sillas Córdoba",
     descripcion: "Set de cuatro sillas apilables en contrachapado de nogal y acero.",
@@ -100,6 +110,7 @@ const productos = [
     incluye: "Set de 4 sillas"
   },
   {
+    id: 11,
     ruta:"img/Escritorio Costa.png",
     nombre: "Escritorio Costa",
     descripcion: "Escritorio compacto con cajón y tapa pasacables en bambú laminado.",
@@ -110,6 +121,7 @@ const productos = [
     cables: "Pasacables integrado"
   },
   {
+    id: 12,
     ruta:"img/Silla de Trabajo Belgrano.png",
     nombre: "Silla de Trabajo Belgrano",
     descripcion: "Silla ergonómica regulable en altura con respaldo de malla transpirable.",
@@ -131,6 +143,12 @@ function renderizarProductos() {
   const destacados = productos.slice(0, 3);
   contenedor.innerHTML = "";
 
+  const titulo = document.createElement('h2');
+  titulo.classList.add('text-center', 'mb-4');
+  titulo.textContent = "Productos Destacados";
+  titulo.style.width = "100%"; // Ocupa todo el ancho del contenedor flex
+  contenedor.appendChild(titulo);
+
   destacados.forEach(prod => {
     const card = document.createElement('div');
     card.classList.add('card');
@@ -141,7 +159,7 @@ function renderizarProductos() {
         <h5 class="card-title">${prod.nombre}</h5>
         <p class="card-text">${prod.descripcion}</p>
         <p><b>Medidas:</b> ${prod.medidas || '-'}</p>
-        <a href="#" class="btn btn-primary">Ver más</a>
+        <a href="producto.html?id=${prod.id}" class="btn btn-primary">Ver más</a>
       </div>
     `;
     contenedor.appendChild(card);
@@ -177,7 +195,7 @@ function inicializarCatalogo() {
           <h5 class="card-title">${prod.nombre}</h5>
           <p class="card-text">${prod.descripcion}</p>
           <p><b>Medidas:</b> ${prod.medidas || '-'}</p>
-          <a href="#" class="btn btn-primary">Ver más</a>
+          <a href="producto.html?id=${prod.id}" class="btn btn-primary">Ver más</a>
         </div>
       `;
       contenedor.appendChild(card);
