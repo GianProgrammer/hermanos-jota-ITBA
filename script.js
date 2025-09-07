@@ -249,3 +249,30 @@ document.addEventListener("DOMContentLoaded", () => {
         motivoSelect.appendChild(opt);
     });
 });
+
+    // Detectar id desde la URL
+    function getQueryParam(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+    }
+    document.addEventListener("DOMContentLoaded", () => {
+      const idProducto = getQueryParam("id");
+      if (!idProducto) return;
+
+      const producto = productos.find(p => p.id == idProducto);
+      if (!producto) return;
+
+      const contenedor = document.getElementById("detalle-producto");
+      contenedor.innerHTML = `
+        <div class="imagen">
+          <img src="${producto.ruta || 'img/no-image.png'}" alt="${producto.nombre}">
+        </div>
+        <div class="info">
+          <h1>${producto.nombre}</h1>
+          <p>${producto.descripcion}</p>
+          <div class="precio"> Medidas: ${producto.medidas}</div>
+          <a href="productos.html" class="btn-volver">⬅ Volver a Productos</a>
+        </div>
+      `;
+    });
+
